@@ -1,6 +1,5 @@
 # MarketWatchBI
-Web scrapper for Reserve Bank of India
-Converts the page data to an excel sheet
+Web scrapper for Reserve Bank of India, converts the page data to an excel sheet
 
 # Usage
 If using firefox, need to install geckodriver (https://github.com/mozilla/geckodriver/releases)
