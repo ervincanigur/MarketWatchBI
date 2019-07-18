@@ -1,10 +1,8 @@
-from decimal import Decimal
 import openpyxl
 from openpyxl.styles import Font, Alignment
 
 
 class Populate(object):
-    # TODO: formatting of text
 
     def __init__(self):
         self.wb = openpyxl.Workbook()
