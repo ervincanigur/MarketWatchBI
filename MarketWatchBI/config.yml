@@ -1,2 +1,5 @@
+# MarketWatchBI Configuration
 url: https://www.ccilindia.com/OMMWCG.aspx
 table_id: grdMWCG
+# Make sure file format is .xlsx
+output_file: output.xlsx

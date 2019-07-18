@@ -14,4 +14,4 @@ if __name__ == "__main__":
     """ Excel populate """
     out = Populate()
     out.write(data)
-    out.save("test.xlsx")
+    out.save(cfg['output_file'])
