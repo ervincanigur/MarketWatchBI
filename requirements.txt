@@ -1,0 +1,4 @@
+yaml
+selenium
+bs4
+openpyxl

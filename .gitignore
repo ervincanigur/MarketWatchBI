@@ -1,3 +1,12 @@
+# PyCharm
+.idea/
+*.iml
+target/
+out/
+
+# Other
+*.xlsx
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
