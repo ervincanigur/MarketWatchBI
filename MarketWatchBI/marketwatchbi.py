@@ -8,13 +8,10 @@ if __name__ == "__main__":
         cfg = yaml.safe_load(f)
 
     """ Scrapper """
-    scrap = Scrap(cfg, cfg['url'])
+    scrap = Scrap(cfg['url'])
     data = scrap.read('table', {'id': cfg['table_id']})
 
-    for d in data:
-        print(d)
-
     """ Excel populate """
-    out = Populate(cfg)
+    out = Populate()
     out.write(data)
     out.save("test.xlsx")

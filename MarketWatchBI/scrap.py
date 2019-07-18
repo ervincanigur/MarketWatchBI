@@ -4,15 +4,13 @@ from bs4 import BeautifulSoup as Soup
 
 class Scrap(object):
 
-    def __init__(self, cfg, url):
-        self.cfg = cfg
+    def __init__(self, url):
         self.url = url
         self.page_soup = None
         self.data = []
 
     def scrap(self, ele, att):
         table = self.page_soup.find(ele, attrs=att)
-
         rows = table.findAll('tr')
         for row in rows:
             cols = row.findAll('td')
@@ -28,4 +26,5 @@ class Scrap(object):
             driver.find_element_by_xpath('//*[@id="grdMWCG"]/tbody/tr[27]/td/a').click()
             self.page_soup = Soup(driver.page_source, 'html.parser')
             self.scrap(ele, att)
+            driver.close()
         return self.data
