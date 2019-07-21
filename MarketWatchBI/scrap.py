@@ -1,5 +1,6 @@
-from selenium import webdriver
 from bs4 import BeautifulSoup as Soup
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
 
 class Scrap(object):
@@ -23,7 +24,16 @@ class Scrap(object):
             driver.get(self.url)
             self.page_soup = Soup(driver.page_source, 'html.parser')
             self.scrap(ele, att)
-            driver.find_element_by_xpath('//*[@id="grdMWCG"]/tbody/tr[27]/td/a').click()
+            if len(self.data) <= 2:
+                print("ERROR: No data on page")
+                driver.close()
+                return self.data
+            try:
+                driver.find_element_by_xpath('//*[@id="grdMWCG"]/tbody/tr[27]/td/a').click()
+            except NoSuchElementException:
+                print("ERROR: Unable to find second page")
+                driver.close()
+                return self.data
             self.page_soup = Soup(driver.page_source, 'html.parser')
             self.scrap(ele, att)
             driver.close()
