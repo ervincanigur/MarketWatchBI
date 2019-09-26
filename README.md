@@ -1,5 +1,5 @@
 # MarketWatchBI
-Web scrapper for Reserve Bank of India NDS-OM, converts the page data to an excel sheet.
+Reserve Bank of India NDS-OM converts the page data to an excel sheet.
 
 ## Usage
 If using firefox, need to install geckodriver (https://github.com/mozilla/geckodriver/releases)
