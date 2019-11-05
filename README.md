@@ -20,3 +20,4 @@ table_id is the HTML id for the table containing the data
   - Work for the BSE Bombay Stock Exchange
   - Multiple page support
   - Multiple runs aka run every 3 minutes, different output file
+  - Some kind of data analysis?
