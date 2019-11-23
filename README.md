@@ -21,3 +21,4 @@ table_id is the HTML id for the table containing the data
   - Multiple page support
   - Multiple runs aka run every 3 minutes, different output file
   - Some kind of data analysis?
+  - Support for when the market is down
