@@ -1,4 +1,4 @@
-yaml
+pyyaml
 selenium
 bs4
 openpyxl
